@@ -8,7 +8,7 @@ function App() {
       <Grid2 xs={12}>
         <NavBar />
       </Grid2>
-      <Grid2 lg={3} display={{ xs: "none", lg: "block" }}>
+      <Grid2 lg={2} display={{ xs: "none", lg: "block" }}>
         <p> Aside </p>
       </Grid2>
       <Grid2 lg>
