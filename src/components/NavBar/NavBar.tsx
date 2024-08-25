@@ -12,7 +12,7 @@ const NavBar = () => {
       aria-label="Main Navigation"
     >
       <img src={logo} alt="Gamehub Logo" width="50px" height="50px" />
-      <Switch />
+      <Switch id="darkModeSwitch" />
     </Stack>
   );
 };

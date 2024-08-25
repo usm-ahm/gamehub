@@ -1,6 +1,6 @@
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
-import NavBar from "./components/NavBar";
-import GameGrid from "./components/Main";
+import { NavBar } from "./components/NavBar";
+import { GameGrid } from "./components/Main";
 
 function App() {
   return (

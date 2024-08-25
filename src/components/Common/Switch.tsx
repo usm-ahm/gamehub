@@ -2,6 +2,7 @@ import { FormControlLabel, Switch as MUISwitch } from "@mui/material";
 import { ChangeEvent, useState } from "react";
 
 interface Props {
+  id: string;
   label?: string;
   labelPlacement?: "end" | "start" | "top" | "bottom";
   color?:
@@ -16,6 +17,7 @@ interface Props {
 }
 
 const Switch = ({
+  id,
   label = "",
   labelPlacement = "end",
   color = "default",
@@ -32,6 +34,7 @@ const Switch = ({
     <FormControlLabel
       control={
         <MUISwitch
+          id={id}
           checked={checked}
           color={color}
           onChange={handleChange}
