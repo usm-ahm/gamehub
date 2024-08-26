@@ -1,5 +1,6 @@
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { Game } from "../../hooks/useGames";
+import PlatformList from "./PlatformList";
 
 interface Props {
   game: Game;
@@ -7,7 +8,7 @@ interface Props {
 
 const GameCard = ({ game }: Props) => {
   return (
-    <Card sx={{ borderRadius: "10px" }}>
+    <Card sx={{ borderRadius: 2 }}>
       <CardMedia
         component="img"
         image={game.background_image}
@@ -15,6 +16,9 @@ const GameCard = ({ game }: Props) => {
       />
       <CardContent>
         <Typography variant="h6">{game.name}</Typography>
+        <PlatformList
+          platforms={game.parent_platforms.map((p) => p.platform)}
+        />
       </CardContent>
     </Card>
   );
