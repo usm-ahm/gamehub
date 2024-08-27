@@ -8,10 +8,10 @@ function App() {
       <Grid2 xs={12}>
         <NavBar />
       </Grid2>
-      <Grid2 lg={2} display={{ xs: "none", lg: "block" }}>
+      <Grid2 xs={0} lg={2} display={{ xs: "none", lg: "block" }}>
         <p> Aside </p>
       </Grid2>
-      <Grid2 lg>
+      <Grid2 xs={12} lg={10}>
         <GameGrid />
       </Grid2>
     </Grid2>
