@@ -2,6 +2,7 @@ import { Card, CardContent, CardMedia, Stack, Typography } from "@mui/material";
 import { Game } from "../../hooks/useGames";
 import PlatformList from "./PlatformList";
 import CriticScore from "./CriticScore";
+import getCroppedImageUrl from "../../services/image-url";
 
 interface Props {
   game: Game;
@@ -12,7 +13,7 @@ const GameCard = ({ game }: Props) => {
     <Card sx={{ borderRadius: 2 }}>
       <CardMedia
         component="img"
-        image={game.background_image}
+        image={getCroppedImageUrl(game.background_image)}
         alt={`${game.name} Background Image`}
       />
       <CardContent>
