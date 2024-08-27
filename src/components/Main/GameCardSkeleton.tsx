@@ -4,7 +4,7 @@ const GameCardSkeleton = () => {
   return (
     <Card>
       <CardMedia>
-        <Skeleton variant="rectangular" width={340} height={200} />
+        <Skeleton variant="rectangular" sx={{ width: 400, height: 200 }} />
       </CardMedia>
       <CardContent sx={{ height: 100 }}>
         <Skeleton />
