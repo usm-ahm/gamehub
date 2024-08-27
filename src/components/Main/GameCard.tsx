@@ -15,7 +15,9 @@ const GameCard = ({ game }: Props) => {
         alt={`${game.name} Background Image`}
       />
       <CardContent>
-        <Typography variant="h6">{game.name}</Typography>
+        <Typography component="h3" variant="h6">
+          {game.name}
+        </Typography>
         <PlatformList
           platforms={game.parent_platforms.map((p) => p.platform)}
         />
