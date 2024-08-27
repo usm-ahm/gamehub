@@ -2,7 +2,7 @@ import { Card, CardContent, CardMedia, Skeleton } from "@mui/material";
 
 const GameCardSkeleton = () => {
   return (
-    <Card sx={{ borderRadius: 2 }}>
+    <Card>
       <CardMedia>
         <Skeleton variant="rectangular" width={340} height={200} />
       </CardMedia>
