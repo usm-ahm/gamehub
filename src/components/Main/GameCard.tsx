@@ -15,6 +15,8 @@ const GameCard = ({ game }: Props) => {
         component="img"
         image={getCroppedImageUrl(game.background_image)}
         alt={`${game.name} Background Image`}
+        width={300}
+        height={200}
       />
       <CardContent>
         <Typography component="h3" variant="h6">
