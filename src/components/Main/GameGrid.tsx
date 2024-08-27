@@ -5,7 +5,7 @@ import GameCard from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton";
 
 const GameGrid = () => {
-  const { games, error, isLoading } = useGames();
+  const { data, error, isLoading } = useGames();
 
   if (isLoading)
     return (
@@ -22,7 +22,7 @@ const GameGrid = () => {
 
   return (
     <Grid2 container spacing={2} sx={{ p: 2 }}>
-      {games.map((game) => (
+      {data.map((game) => (
         <Grid2 key={game.id} xs={12} sm={6} md={4} lg={3}>
           <GameCard game={game} />
         </Grid2>
