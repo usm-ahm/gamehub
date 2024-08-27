@@ -24,19 +24,23 @@ interface Games {
 const useGames = () => {
   const [games, setGames] = useState<Game[]>([]);
   const [error, setError] = useState("");
+  const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
     const controller = new AbortController();
 
     const fetchGames = async () => {
+      setLoading(true);
       try {
         const response = await apiClient.get<Games>("/games", {
           signal: controller.signal,
         });
         setGames(response.data.results);
+        setLoading(false);
       } catch (error) {
         if (error instanceof CanceledError) return;
         setError((error as AxiosError).message);
+        setLoading(false);
       }
     };
 
@@ -47,7 +51,7 @@ const useGames = () => {
     };
   }, []);
 
-  return { games, error };
+  return { games, error, isLoading };
 };
 
 export default useGames;
