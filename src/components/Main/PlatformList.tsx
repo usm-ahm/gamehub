@@ -1,4 +1,4 @@
-import { styled } from "@mui/material";
+import { Box, styled } from "@mui/material";
 import { Platform } from "../../hooks/useGames";
 import { Icon } from "@iconify/react";
 import { grey } from "@mui/material/colors";
@@ -11,7 +11,7 @@ const PlatformIcon = styled(Icon)({
   width: 20,
   height: 20,
   color: grey[600],
-  padding: 1,
+  margin: 2,
 });
 
 const PlatformList = ({ platforms }: Props) => {
@@ -28,11 +28,11 @@ const PlatformList = ({ platforms }: Props) => {
   };
 
   return (
-    <>
+    <Box>
       {platforms.map((platform) => (
         <PlatformIcon key={platform.slug} icon={platformIcons[platform.slug]} />
       ))}
-    </>
+    </Box>
   );
 };
 
