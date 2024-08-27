@@ -1,6 +1,7 @@
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { NavBar } from "./components/NavBar";
 import { GameGrid } from "./components/Main";
+import { GenreList } from "./components/Aside";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
         <NavBar />
       </Grid2>
       <Grid2 xs={0} lg={2} display={{ xs: "none", lg: "block" }}>
-        <p> Aside </p>
+        <GenreList />
       </Grid2>
       <Grid2 xs={12} lg={10}>
         <GameGrid />
