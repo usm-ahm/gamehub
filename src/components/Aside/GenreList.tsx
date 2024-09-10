@@ -1,5 +1,13 @@
-import { Typography } from "@mui/material";
+import {
+  Avatar,
+  List,
+  ListItem,
+  ListItemAvatar,
+  ListItemText,
+  Typography,
+} from "@mui/material";
 import useGenres from "../../hooks/useGenres";
+import getCroppedImageUrl from "../../services/image-url";
 
 const GenreList = () => {
   const { data, error, isLoading } = useGenres();
@@ -9,11 +17,16 @@ const GenreList = () => {
   if (error) return <Typography>{error}</Typography>;
 
   return (
-    <ul>
-      {data.map((genre) => (
-        <li>{genre.name}</li>
+    <List>
+      {data.map((genre, index) => (
+        <ListItem key={index}>
+          <ListItemAvatar>
+            <Avatar src={getCroppedImageUrl(genre.image_background)} />
+          </ListItemAvatar>
+          <ListItemText primary={genre.name} />
+        </ListItem>
       ))}
-    </ul>
+    </List>
   );
 };
 
