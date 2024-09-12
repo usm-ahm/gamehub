@@ -19,7 +19,10 @@ function App() {
       </Grid2>
       {isLargeScreen && (
         <Grid2 size={{ lg: 2 }}>
-          <GenreList onSelectGenre={(genre) => setSelectedGenre(genre)} />
+          <GenreList
+            onSelectGenre={(genre) => setSelectedGenre(genre)}
+            selectedGenre={selectedGenre}
+          />
         </Grid2>
       )}
       <Grid2 size={{ xs: 12, lg: 10 }}>
