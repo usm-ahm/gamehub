@@ -1,6 +1,6 @@
 import { Grid2, Theme, useMediaQuery } from "@mui/material";
 import { NavBar } from "./components/NavBar";
-import { GameGrid } from "./components/Main";
+import { GameGrid, PlatformSelector } from "./components/Main";
 import { GenreList } from "./components/Aside";
 import { useState } from "react";
 import { Genre } from "./hooks/useGenres";
@@ -26,6 +26,7 @@ function App() {
         </Grid2>
       )}
       <Grid2 size={{ xs: 12, lg: 10 }}>
+        <PlatformSelector />
         <GameGrid selectedGenre={selectedGenre} />
       </Grid2>
     </Grid2>
